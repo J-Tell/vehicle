@@ -1,5 +1,5 @@
 package vehicle;
 
-public class ElectricCar extends Car {
+abstract class ElectricCar extends Car {
     
 }
