@@ -1,5 +1,7 @@
 package vehicle;
 
+import java.util.List;
+
 abstract class Car {
 
     private String make;
@@ -32,9 +34,7 @@ not, returns false.
 /** Drives the full given number of miles.
 @throws IllegalArgumentException if miles is negative or if miles is
 too high given the current fuel. */
-    public abstract void drive(double miles) {
-        //
-    }
+    public abstract void drive(double miles);
 /** Gives String representation of Car as
 "<make and model> (<mileage> mi)"
 Mileage should be rounded to 1 decimal place. If mileage is a whole
@@ -58,9 +58,7 @@ number, ".0" should still display.
     }
 /** Returns how many more miles the car can currently go given the
 remaining fuel/energy reserves. */
-    public abstract double getRemainingRange() {
-        //
-    }
+    public abstract double getRemainingRange();
 /** Adds mileage to the odometer.
 @throws IllegalArgumentException if miles is negative. */
     protected void addMileage(double miles) {
@@ -74,7 +72,10 @@ days successfully driven.
 attempted days. The exception check should occur prior to any driving
 is attempted. */
     public int roadTrip(List<Double> milesEachDay) {
-        
+        for (double day: milesEachDay) {
+            System.out.println("hi");
+        }
+        return 0;
     }
 
 }
