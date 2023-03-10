@@ -6,7 +6,9 @@ abstract class GasPoweredCar extends Car {
 
     public GasPoweredCar(String make, String model, double mpg, double fuelCapacityGallons);
 
-    public void drive(double miles);
+    public void drive(double miles) {
+        return
+    }
     
     public double getMPG() {
 
@@ -17,7 +19,7 @@ abstract class GasPoweredCar extends Car {
     }
 
     public double getFuelCapacity() {
-        
+
     }
 
     public void refillTank() {
