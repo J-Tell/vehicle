@@ -8,8 +8,10 @@ abstract class Car {
 
     /** Creates a car with a starting mileage on the odometer.
 @throws IllegalArgumentException if startingMileage is negative*/
-    public Car(String make, String model, double startingMileage) {
-        make = this.make;
+    public Car(String m, String mo, double sm) {
+        make = m;
+        model = mo;
+        startingMileage = sm;
     }
 /** Starting mileage is 0. */
     public Car(String make, String model)
