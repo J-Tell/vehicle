@@ -1,5 +1,5 @@
 package vehicle;
 
 abstract class Car {
-    public Car(String make){}
+    public Car(String make, String model, double startingMileage){}
 }
