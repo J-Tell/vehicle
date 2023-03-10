@@ -73,6 +73,9 @@ days successfully driven.
 @throws IllegalArgumentException if miles is negative for any of the
 attempted days. The exception check should occur prior to any driving
 is attempted. */
-    public int roadTrip(List<Double> milesEachDay)
+    public int roadTrip(List<Double> milesEachDay) {
+        int days = 0;
+        return days;
+    }
 
 }
