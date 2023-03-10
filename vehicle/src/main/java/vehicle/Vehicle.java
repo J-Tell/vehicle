@@ -1,4 +1,4 @@
-package vehicle.vehicle.src.main.java.vehicle;
+package vehicle;
 
 public class Vehicle {
     
