@@ -3,11 +3,13 @@ package vehicle;
 abstract class Car {
 
     private String make;
+    private String model;
+    private double startingMileage;
 
     /** Creates a car with a starting mileage on the odometer.
 @throws IllegalArgumentException if startingMileage is negative*/
     public Car(String make, String model, double startingMileage) {
-        //
+        make = this.make;
     }
 /** Starting mileage is 0. */
     public Car(String make, String model)
@@ -17,23 +19,36 @@ abstract class Car {
 /** If able to drive the full given number of miles, returns true. If
 not, returns false.
 @throws IllegalArgumentException if miles is negative.*/
-    public boolean canDrive(double miles)
+    public boolean canDrive(double miles) {
+        //
+    }
 /** Drives the full given number of miles.
 @throws IllegalArgumentException if miles is negative or if miles is
 too high given the current fuel. */
-    public abstract void drive(double miles)
+    public abstract void drive(double miles) {
+        //
+    }
 /** Gives String representation of Car as
 "<make and model> (<mileage> mi)"
 Mileage should be rounded to 1 decimal place. If mileage is a whole
 number, ".0" should still display.
 */
-    public String toString()
+    public String toString() {
+        //
+    }
 /** Returns how many miles have been driven so far (odometer). */
     public double getMileage()
+    {
+        //
+    }
 /** Returns the make of the car. */
-    public String getMake()
+    public String getMake() {
+        return make;
+    }
 /** Returns the model of the car. */
-    public String getModel()
+    public String getModel() {
+        return model;
+    }
 /** Returns how many more miles the car can currently go given the
 remaining fuel/energy reserves. */
     public abstract double getRemainingRange()
