@@ -1,5 +1,8 @@
 package vehicle;
 
-public class GasPoweredCar {
+abstract class GasPoweredCar extends Car {
     
+    public GasPoweredCar() {
+        super();
+    }
 }
