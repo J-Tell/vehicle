@@ -10,7 +10,7 @@ that stuff. All Honda Accordian models have 14.5 gallon tanks and
     // private double mpg;
 
     public HondaAccordian(double sm, int my) {
-        super();
+        super(getMake(), getModel(), sm, my);
         startingMileage = sm;
         modelYear = my;
         double gallons = 14.5;
