@@ -1,17 +1,27 @@
 package vehicle;
 
 abstract class GasPoweredCar extends Car {
+    double mpg;
+    double fuelCapacityGallons;
     
-    public GasPoweredCar(String make, String model, double startingMileage, double mpg, double fuelCapacityGallons);
+    public GasPoweredCar(String make, String model, double startingMileage, double m, double cap) {
+        super(make, model, startingMileage);
+        mpg = m;
+        fuelCapacityGallons = cap;
+    }
 
-    public GasPoweredCar(String make, String model, double mpg, double fuelCapacityGallons);
+    public GasPoweredCar(String make, String model, double m, double cap) {
+        super(make, model);
+        mpg = m;
+        fuelCapacityGallons = cap;
+    }
 
     public void drive(double miles) {
-        return
+        
     }
     
     public double getMPG() {
-
+        return mpg;
     }
 
     public double getFuelLevel() {
