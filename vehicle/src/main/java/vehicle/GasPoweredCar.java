@@ -19,7 +19,9 @@ public abstract class GasPoweredCar extends Car{
     public void drive(double miles) {
         if(miles < 1 || miles > this.getFuelLevel())
             throw new IllegalArgumentException();
-        this.fuelCapacityGallons = 0;
+            System.out.println(this.getMake() + " " + this.getModel() + " " + this.getMileage() + " mi");
+        this.addMileage(miles);
+
         
     }
 
@@ -41,4 +43,5 @@ public abstract class GasPoweredCar extends Car{
         //this.getFuelLevel() += gallons;
     }
     
+
 }
