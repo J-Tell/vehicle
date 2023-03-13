@@ -72,10 +72,16 @@ days successfully driven.
 attempted days. The exception check should occur prior to any driving
 is attempted. */
     public int roadTrip(List<Double> milesEachDay) {
+        int days = 0;
         for (double day: milesEachDay) {
-            System.out.println("hi");
+            if (startingMileage > day) {
+                startingMileage -= day;
+                days++;
+            } else {
+                break;
+            }
         }
-        return 0;
+        return days;
     }
 
 }

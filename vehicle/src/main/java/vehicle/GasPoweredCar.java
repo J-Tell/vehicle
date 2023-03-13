@@ -21,7 +21,7 @@ abstract class GasPoweredCar extends Car {
     }
     
     public double getMPG() {
-
+        return mpg;
     }
 
     public double getFuelLevel() {
