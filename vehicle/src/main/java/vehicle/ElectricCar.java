@@ -28,7 +28,7 @@ abstract class ElectricCar extends Car {
     @throws IllegalArgumentException if miles is too high given the
     current charge.*/
     public void drive(double miles) {
-
+        
     }
 
     /** Returns how many more miles the car can currently go without
@@ -39,7 +39,7 @@ abstract class ElectricCar extends Car {
 
     /** Returns how many miles the car could go on a full charge. */
     public double getMaxRange() {
-
+        
     }
 
     /** Recharges the car to max range capability. */
