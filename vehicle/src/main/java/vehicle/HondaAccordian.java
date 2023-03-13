@@ -18,9 +18,8 @@ that stuff. All Honda Accordian models have 14.5 gallon tanks and
     }
 /** Defaults mileage to 0. */
     public HondaAccordian(int year) {
-        super()
-        year = modelYear;
-        startingMileage = 0;
+        super("Honda", "Accordian", 0, 14.5);
+        year = this.modelYear;
     }
 /** Prints out the model year, make and model, and mileage.
 Ex: "2019 Honda Accordian (<mileage> mi)"
