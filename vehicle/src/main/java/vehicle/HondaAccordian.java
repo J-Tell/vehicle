@@ -25,7 +25,6 @@ Ex: "2019 Honda Accordian (<mileage> mi)"
 Coding tip: Write this method to re-use the behavior of the
 superclass toString. Don’t copy-and-paste the same code here. */
     public String toString() {
-        //wrong
-        System.out.println(modelYear + " Honda Accordian " + " (<" + startingMileage + "> mi)");
+        return super.toString();
     }
 }
