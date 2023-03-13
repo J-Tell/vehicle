@@ -15,6 +15,11 @@ public abstract class GasPoweredCar extends Car{
         startingMileage = this.startingMileage;
         fuelCapacityGallons = this.fuelCapacityGallons;
     }
+    /** Defaults mileage to 0.
+@throws IllegalArgumentException if mpg or fuelCapacityGallons are
+non-positive. */public GasPoweredCar (String make, String model, double mpg, double fuelCapacityGallons) {
+
+}
 
     public void drive(double miles) {
         if(miles < 1 || miles > this.getFuelLevel())
@@ -22,8 +27,6 @@ public abstract class GasPoweredCar extends Car{
         System.out.println(this.getMake() + " " + this.getModel() + " " + this.getMileage() + " mi");
 
         this.addMileage(miles);
-
-        
     }
 
     public double getMPG() {
