@@ -11,6 +11,9 @@ abstract class Car {
     /** Creates a car with a starting mileage on the odometer.
 @throws IllegalArgumentException if startingMileage is negative*/
     public Car(String m, String mo, double sm) {
+        if (startingMileage < 0) {
+            throw new IllegalArgumentException("Starting Mileage is negative.");
+        }
         make = m;
         model = mo;
         startingMileage = sm;
@@ -26,6 +29,9 @@ abstract class Car {
 not, returns false.
 @throws IllegalArgumentException if miles is negative.*/
     public boolean canDrive(double miles) {
+        if (miles < 0) {
+            throw new IllegalArgumentException("Miles is negative.");
+        }
         if (miles <= startingMileage) {
             return true;
         }
@@ -35,6 +41,7 @@ not, returns false.
 @throws IllegalArgumentException if miles is negative or if miles is
 too high given the current fuel. */
     public abstract void drive(double miles);
+    
 /** Gives String representation of Car as
 "<make and model> (<mileage> mi)"
 Mileage should be rounded to 1 decimal place. If mileage is a whole
@@ -62,6 +69,9 @@ remaining fuel/energy reserves. */
 /** Adds mileage to the odometer.
 @throws IllegalArgumentException if miles is negative. */
     protected void addMileage(double miles) {
+        if (miles < 0) {
+            throw new IllegalArgumentException("Miles is negative.");
+        }
         startingMileage += miles;
     }
 /** The car attempts to drive, in order, each of the daily number of
@@ -74,6 +84,9 @@ is attempted. */
     public int roadTrip(List<Double> milesEachDay) {
         int days = 0;
         for (double day: milesEachDay) {
+            if (day < 0) {
+                throw new IllegalArgumentException("Miles is negative");
+            }
             if (startingMileage > day) {
                 startingMileage -= day;
                 days++;
