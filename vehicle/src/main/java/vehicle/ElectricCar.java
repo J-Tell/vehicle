@@ -1,8 +1,8 @@
 package vehicle;
 
 abstract class ElectricCar extends Car {
-    static double milesOnMaxCharge;
-    double milesLeft;
+    private double milesOnMaxCharge;
+    private double milesLeft;
     /** Note: Car begins with a full charge (and thus range).
     @throws IllegalArgumentException if milesOnMaxCharge is nonpositive.*/
     public ElectricCar(String make, String model, double startingMileage, double onMaxCharge) {
