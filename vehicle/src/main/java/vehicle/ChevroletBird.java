@@ -6,11 +6,13 @@ public class ChevroletBird extends ElectricCar{
     private double startingMileage;
     private boolean openWings;
     public ChevroletBird(double startingMileage) {
+        super("Chevrolet", "Bird", 250);
         startingMileage = 250;
         openWings = false;
     }
 /** Defaults mileage to 0. */
     public ChevroletBird() {
+        super("Chevrolet", "Bird", milesOnMaxCharge);
         startingMileage = 0;
     }
 /** Returns whether the wings are currently extended. */
