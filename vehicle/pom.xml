@@ -27,6 +27,15 @@
     </dependency>
   </dependencies>
 
+  <profiles>
+        <profile>
+            <id>development</id>
+            <properties>
+                <src.dir>${project.build.directory}vehicle/vehicle/src/main/java/vehicle</src.dir>
+            </properties>
+        </profile>
+    </profiles>
+
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>

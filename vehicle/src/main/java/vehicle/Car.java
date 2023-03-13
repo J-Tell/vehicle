@@ -10,20 +10,20 @@ abstract class Car {
 
     /** Creates a car with a starting mileage on the odometer.
 @throws IllegalArgumentException if startingMileage is negative*/
-    public Car(String m, String mo, double sm) {
+    public Car(String make, String model, double sm) {
         if (startingMileage < 0) {
             throw new IllegalArgumentException("Starting Mileage is negative.");
         }
-        make = m;
-        model = mo;
-        startingMileage = sm;
+        this.make = make;
+        this.model = model;
+        this.startingMileage = sm;
     }
 /** Starting mileage is 0. */
-    public Car(String m, String mo)
+    public Car(String make, String model)
     {
-        make = m;
-        model = mo;
-        startingMileage = 0;
+        this.make = make;
+        this.model = model;
+        this.startingMileage = 0;
     }
 /** If able to drive the full given number of miles, returns true. If
 not, returns false.
@@ -49,23 +49,23 @@ Mileage should be rounded to 1 decimal place. If mileage is a whole
 number, ".0" should still display.
 */
     public String toString() {
-        return "<" + make + " and " + model + "> (" + startingMileage + "> )";
+        return "<" + this.make + " and " + this.model + "> (" + this.startingMileage + "> )";
     }
 
 /** Returns how many miles have been driven so far (odometer). */
     public double getMileage()
     {
-        return startingMileage;
+        return this.startingMileage;
     }
 
 /** Returns the make of the car. */
     public String getMake() {
-        return make;
+        return this.make;
     }
 
 /** Returns the model of the car. */
     public String getModel() {
-        return model;
+        return this.model;
     }
 
 /** Returns how many more miles the car can currently go given the
@@ -78,7 +78,7 @@ remaining fuel/energy reserves. */
         if (miles < 0) {
             throw new IllegalArgumentException("Miles is negative.");
         }
-        startingMileage += miles;
+        this.startingMileage += miles;
     }
 /** The car attempts to drive, in order, each of the daily number of
 miles in the list milesEachDay. Once the car cannot drive one of the
@@ -94,7 +94,7 @@ is attempted. */
                 throw new IllegalArgumentException("Miles is negative");
             }
             if (canDrive(day)) {
-                startingMileage += day;
+                addMileage(days);
                 days++;
             } else {
                 break;
