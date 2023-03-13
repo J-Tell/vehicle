@@ -1,6 +1,6 @@
 package vehicle;
 
-public class TeslaModelZ extends ElectricCar implements selfDriving {
+public class TeslaModelZ extends ElectricCar implements SelfDriving {
     private int modelNum;
 
     /**
@@ -43,12 +43,11 @@ public class TeslaModelZ extends ElectricCar implements selfDriving {
      * implement Car.toString()
      */
     public String toString() {
-        return getMake() + " " + getModel() + " " + getMileage()";
+        return getMake() + " " + getModel() + " " + getMileage();
     }
-    /**
-    @throws IllegalArgumentException if miles is negative.
-    */
+    /** IllegalArgumentException if miles is negative. */
     public void driveAutonomously(double miles) {
 
     }
+
 }
