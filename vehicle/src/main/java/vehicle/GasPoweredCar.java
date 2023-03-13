@@ -19,14 +19,17 @@ public abstract class GasPoweredCar extends Car{
     public void drive(double miles) {
         if(miles < 1 || miles > this.getFuelLevel())
             throw new IllegalArgumentException();
-            System.out.println(this.getMake() + " " + this.getModel() + " " + this.getMileage() + " mi");
+        System.out.println(this.getMake() + " " + this.getModel() + " " + this.getMileage() + " mi");
+
         this.addMileage(miles);
 
         
     }
 
     public double getMPG() {
-        return this.startingMileage;
+        this.drive(1);
+
+        return this.getMileage() / this.getFuelCapacity();
     }
 
     public double getFuelLevel() {
@@ -40,7 +43,8 @@ public abstract class GasPoweredCar extends Car{
     public void refillTank(double gallons) {
         if(gallons < 0 || gallons > this.fuelCapacityGallons)
             throw new IllegalArgumentException();
-        //this.getFuelLevel() += gallons;
+        double x = this.getFuelLevel();
+        x += gallons;
     }
     
 
