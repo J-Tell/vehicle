@@ -32,11 +32,12 @@ not, returns false.
         if (miles < 0) {
             throw new IllegalArgumentException("Miles is negative.");
         }
-        if (miles <= startingMileage) {
+        if (miles <= getRemainingRange()) {
             return true;
         }
         return false;
     }
+
 /** Drives the full given number of miles.
 @throws IllegalArgumentException if miles is negative or if miles is
 too high given the current fuel. */
@@ -50,22 +51,27 @@ number, ".0" should still display.
     public String toString() {
         return "<" + make + " and " + model + "> (" + startingMileage + "> )";
     }
+
 /** Returns how many miles have been driven so far (odometer). */
     public double getMileage()
     {
         return startingMileage;
     }
+
 /** Returns the make of the car. */
     public String getMake() {
         return make;
     }
+
 /** Returns the model of the car. */
     public String getModel() {
         return model;
     }
+
 /** Returns how many more miles the car can currently go given the
 remaining fuel/energy reserves. */
     public abstract double getRemainingRange();
+
 /** Adds mileage to the odometer.
 @throws IllegalArgumentException if miles is negative. */
     protected void addMileage(double miles) {
@@ -87,8 +93,8 @@ is attempted. */
             if (day < 0) {
                 throw new IllegalArgumentException("Miles is negative");
             }
-            if (startingMileage > day) {
-                startingMileage -= day;
+            if (canDrive(day)) {
+                startingMileage += day;
                 days++;
             } else {
                 break;
