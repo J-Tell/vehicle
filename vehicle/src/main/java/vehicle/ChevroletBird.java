@@ -21,5 +21,8 @@ public class ChevroletBird extends ElectricCar{
 you retract your wings first (duh).
 Coding tip: Write this method to re-use the behavior of the
 superclass drive. Don’t copy-and-paste the same code here.*/
-    public void drive(double miles)
+    public void drive(double miles) {
+        openWings = false;
+       super.drive(); 
+    }
 }
