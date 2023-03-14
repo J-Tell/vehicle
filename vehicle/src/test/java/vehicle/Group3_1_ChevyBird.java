@@ -48,8 +48,4 @@ public class Group3_1_ChevyBird {
             bird.drive(5);
         }, "Driving beyond empty should fail.");
     }
-    public void chevyWingsTest() {
-    }
-    public void chevyDriveTest() {
-    }
 }
