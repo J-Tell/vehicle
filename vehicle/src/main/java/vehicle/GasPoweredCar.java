@@ -7,19 +7,25 @@ public abstract class GasPoweredCar extends Car{
     private double startingMileage;
     private String model;
 
-    public GasPoweredCar(String make, String model, double startingMileage, double fuelCapacityGallons) {
+    // public GasPoweredCar(String make, String model, double startingMileage, double fuelCapacityGallons) {
         
-        super(make, model, startingMileage);
-        make = this.make;
-        model = this.model;
-        startingMileage = this.startingMileage;
-        fuelCapacityGallons = this.fuelCapacityGallons;
-    }
+    //     super(make, model, startingMileage);
+    //     make = this.make;
+    //     model = this.model;
+    //     startingMileage = this.startingMileage;
+    //     fuelCapacityGallons = this.fuelCapacityGallons;
+    // }
     /** Defaults mileage to 0.
 @throws IllegalArgumentException if mpg or fuelCapacityGallons are
-non-positive. */public GasPoweredCar (String make, String model, double mpg, double fuelCapacityGallons) {
+non-positive. */public
 
-}
+    public GasPoweredCar (String make, String model, double mpg, double fuelCapacityGallons) {
+        super(make, model, mpg);
+        make = this.make;
+        model = this.model;
+        mpg = this.getMPG();
+        fuelCapacityGallons = this.fuelCapacityGallons;
+    }
 
     public void drive(double miles) {
         if(miles < 1 || miles > this.getFuelLevel())
@@ -32,7 +38,7 @@ non-positive. */public GasPoweredCar (String make, String model, double mpg, dou
     public double getMPG() {
         this.drive(1);
 
-        return this.getMileage() / this.getFuelCapacity();
+        return this.startingMileage() / this.getFuelCapacity();
     }
 
     public double getFuelLevel() {
