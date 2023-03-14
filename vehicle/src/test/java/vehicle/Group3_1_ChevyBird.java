@@ -11,42 +11,42 @@ import org.junit.jupiter.api.Test;
 public class Group3_1_ChevyBird {
     @Test
     public void chevyConstructorTest1() {
-        HondaAccordian honda = new HondaAccordian(2018);
-        assertEquals(0, honda.getMileage(), 0.1, "Default mileage should be zero.");
-        assertEquals(14.5, honda.getFuelCapacity(),  0.1, "Initial fuel capacity not correct.");
-        assertEquals(honda.getFuelCapacity(), honda.getFuelLevel(), 0.1, "The car should begin full.");
+        ChevroletBird bird = new ChevroletBird(250);
+        assertEquals(0, bird.getMileage(), 0.1, "Default mileage should be zero.");
+        assertEquals(14.5, bird.getFuelCapacity(),  0.1, "Initial fuel capacity not correct.");
+        assertEquals(bird.getFuelCapacity(), bird.getFuelLevel(), 0.1, "The car should begin full.");
         assertEquals(33.2, honda.getMPG(), 0.1, "Initial mpg not correct.");
-        assertEquals(honda.getFuelCapacity() * honda.getMPG(), honda.getRemainingRange(), 0.1,
+        assertEquals(bird.getFuelCapacity() * bird.getMPG(), bird.getRemainingRange(), 0.1,
                 "Remaining range of car not correct at creation.");
-        assertEquals("2018 Honda Accordian (0.0 mi)", honda.toString(), "toString does not match");
+        assertEquals("2018 Honda Accordian (0.0 mi)", bird.toString(), "toString does not match");
     }
 
     @Test
     public void chevyConstructorTest2() {
-        HondaAccordian honda = new HondaAccordian(2018);
+        ChevroletBird bird = new ChevroletBird(2018);
 
         assertThrows(IllegalArgumentException.class, () -> {
-            honda.drive(-1);
+            bird.drive(-1);
         }, "Driving mileage cannot be negative.");
 
-       assertTrue(honda.canDrive(30), "canDrive should be true");
-       honda.drive(30);
-        assertEquals(30, honda.getMileage(), .1, "Mileage should be 30 after first drive.");
+       assertTrue(bird.canDrive(30), "canDrive should be true");
+       bird.drive(30);
+        assertEquals(30, bird.getMileage(), .1, "Mileage should be 30 after first drive.");
 
-        honda.drive(200);
-        assertEquals(230, honda.getMileage(), .1, "Mileage should be 230 after second drive.");
+        bird.drive(200);
+        assertEquals(230, bird.getMileage(), .1, "Mileage should be 230 after second drive.");
 
-        assertEquals(honda.getFuelCapacity() * honda.getMPG() - 230, honda.getRemainingRange(), .1,
+        assertEquals(bird.getFuelCapacity() * bird.getMPG() - 230, bird.getRemainingRange(), .1,
                 "Remaining range of car not correct after driving twice.");
 
-        assertFalse(honda.canDrive(252), "Driving 252 should fail.");
-        assertTrue(honda.canDrive(251), "Driving 251 should succeed.");
+        assertFalse(bird.canDrive(252), "Driving 252 should fail.");
+        assertTrue(bird.canDrive(251), "Driving 251 should succeed.");
 
-        honda.drive(251);
-        assertEquals(481, honda.getMileage(), .1, "Mileage should be 481 after third drive.");
+        bird.drive(251);
+        assertEquals(481, bird.getMileage(), .1, "Mileage should be 481 after third drive.");
 
         assertThrows(IllegalArgumentException.class, () -> {
-            honda.drive(5);
+            bird.drive(5);
         }, "Driving beyond empty should fail.");
     }
     public void chevyWingsTest() {
@@ -54,6 +54,11 @@ public class Group3_1_ChevyBird {
     public void chevyDriveTest() {
     }
     public void chevyCanFlyTest() {
+        ChevroletBird bird = new ChevroletBird(-1);
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            bird.drive(-1);
+        }, "Driving mileage cannot be negative.");
     }
     public void chevyFlyingTest() {
     }
