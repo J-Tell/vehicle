@@ -18,7 +18,7 @@ public class Group3_1_ChevyBird {
     public void chevyConstructorTest2() {
         ChevroletBird bird = new ChevroletBird(0);
 
-        assertTrue(bird.canFly(30), "canFly should be false");
+        assertFalse(bird.canFly(30), "canFly should be false");
         assertThrows(IllegalArgumentException.class, () -> {
             bird.canFly(-1);
         }, "Flying mileage cannot be negative.");

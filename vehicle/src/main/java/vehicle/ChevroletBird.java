@@ -12,6 +12,7 @@ public class ChevroletBird extends ElectricCar implements Flying {
 /** Defaults mileage to 0. */
     public ChevroletBird() {
         super("Chevrolet", "Bird", 250);
+        this.openWings = false;
     }
 /** Returns whether the wings are currently extended. */
     public boolean checkWingsExtended() {
@@ -28,7 +29,7 @@ superclass drive. Don’t copy-and-paste the same code here.*/
 
     /** @throws IllegalArgumentException if miles is negative.*/
     public boolean canFly(double miles) {
-        return false;
+        return this.openWings;
     }
 
     /** @throws IllegalArgumentException if miles is negative.
