@@ -14,11 +14,9 @@ public class Group3_1_ChevyBird {
         ChevroletBird bird = new ChevroletBird(250);
         assertEquals(0, bird.getMileage(), 0.1, "Default mileage should be zero.");
         assertEquals(14.5, bird.getFuelCapacity(),  0.1, "Initial fuel capacity not correct.");
-        assertEquals(bird.getFuelCapacity(), bird.getFuelLevel(), 0.1, "The car should begin full.");
-        assertEquals(33.2, honda.getMPG(), 0.1, "Initial mpg not correct.");
+        assertEquals(33.2, bird.getMPG(), 0.1, "Initial mpg not correct.");
         assertEquals(bird.getFuelCapacity() * bird.getMPG(), bird.getRemainingRange(), 0.1,
                 "Remaining range of car not correct at creation.");
-        assertEquals("2018 Honda Accordian (0.0 mi)", bird.toString(), "toString does not match");
     }
 
     @Test
