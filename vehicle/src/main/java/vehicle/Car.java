@@ -49,7 +49,7 @@ Mileage should be rounded to 1 decimal place. If mileage is a whole
 number, ".0" should still display.
 */
     public String toString() {
-        return "<" + this.make + " and " + this.model + "> (" + this.startingMileage + "> )";
+        return this.make + " " + this.model + " (" + this.startingMileage + " mi)";
     }
 
 /** Returns how many miles have been driven so far (odometer). */
