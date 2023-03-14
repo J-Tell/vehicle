@@ -5,12 +5,12 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.sql.Driver;
+
 import org.junit.jupiter.api.Test;
-
-public class Sample_HondaAccordian_Tests {
-
+public class Group3_1_ChevyBird {
     @Test
-    public void hondaConstructorTest1() {
+    public void chevyConstructorTest1() {
         HondaAccordian honda = new HondaAccordian(2018);
         assertEquals(0, honda.getMileage(), 0.1, "Default mileage should be zero.");
         assertEquals(14.5, honda.getFuelCapacity(),  0.1, "Initial fuel capacity not correct.");
@@ -22,15 +22,15 @@ public class Sample_HondaAccordian_Tests {
     }
 
     @Test
-    public void hondaConstructorTest2() {
+    public void chevyConstructorTest2() {
         HondaAccordian honda = new HondaAccordian(2018);
 
         assertThrows(IllegalArgumentException.class, () -> {
             honda.drive(-1);
         }, "Driving mileage cannot be negative.");
 
-        assertTrue(honda.canDrive(30), "canDrive should be true");
-        honda.drive(30);
+       assertTrue(honda.canDrive(30), "canDrive should be true");
+       honda.drive(30);
         assertEquals(30, honda.getMileage(), .1, "Mileage should be 30 after first drive.");
 
         honda.drive(200);
@@ -48,5 +48,13 @@ public class Sample_HondaAccordian_Tests {
         assertThrows(IllegalArgumentException.class, () -> {
             honda.drive(5);
         }, "Driving beyond empty should fail.");
+    }
+    public void chevyWingsTest() {
+    }
+    public void chevyDriveTest() {
+    }
+    public void chevyCanFlyTest() {
+    }
+    public void chevyFlyingTest() {
     }
 }

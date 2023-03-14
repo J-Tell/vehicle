@@ -13,7 +13,7 @@ that stuff. All Honda Accordian models have 14.5 gallon tanks and
     }
 /** Defaults mileage to 0. */
     public HondaAccordian(int year) {
-        super("Honda", "Accordian", 0, 14.5);
+        super("Honda", "Accordian", 33.2, 14.5);
         this.modelYear = year;
     }
 /** Prints out the model year, make and model, and mileage.
@@ -21,6 +21,6 @@ Ex: "2019 Honda Accordian (<mileage> mi)"
 Coding tip: Write this method to re-use the behavior of the
 superclass toString. Don’t copy-and-paste the same code here. */
     public String toString() {
-        return this.modelYear + super.toString();
+        return this.modelYear + " " + super.toString();
     }
 }
