@@ -36,6 +36,10 @@ superclass drive. Don’t copy-and-paste the same code here.*/
     range of the car.
     */
     public void fly(double miles) {
-
+        if (miles < 0 || miles > getRemainingRange()) {
+            throw new IllegalArgumentException("Bad miles");
+        }
+        this.openWings = true;
+        super.drive(miles);
     }
 }
