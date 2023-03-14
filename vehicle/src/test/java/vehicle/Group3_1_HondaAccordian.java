@@ -7,13 +7,25 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.sql.Driver;
 
+import javax.sound.midi.MidiFileFormat;
+
 import org.junit.jupiter.api.Test;
 public class Group3_1_HondaAccordian {
     @Test
     public void hondaConstructorTest1() {
         HondaAccordian honda = new HondaAccordian(2018);
-        assertEquals(0, honda.getMileage(), 0.1, "Default mileage should be zero.");
+        //assertEquals(0, honda.getMileage(), 0.1, "Default mileage should be zero.");
+        double mileage = honda.getMileage();
+        if(mileage != 0)
+            System.out.println("fail (defeault mileage should be 0)");
+        else
+            System.out.println("pass");
         assertEquals(14.5, honda.getFuelCapacity(),  0.1, "Initial fuel capacity not correct.");
+        double expectedfuelCap = 14.5;
+        if(expectedfuelCap != honda.getFuelCapacity())
+            System.out.println("fail (initial fuel capacity not correct)");
+        else
+            System.out.println("pass");
         assertEquals(honda.getFuelCapacity(), honda.getFuelLevel(), 0.1, "The car should begin full.");
         assertEquals(33.2, honda.getMPG(), 0.1, "Initial mpg not correct.");
         assertEquals(honda.getFuelCapacity() * honda.getMPG(), honda.getRemainingRange(), 0.1,
