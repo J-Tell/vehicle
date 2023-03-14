@@ -13,6 +13,7 @@ public class Sample_HondaAccordian_Tests {
     public void hondaConstructorTest1() {
         HondaAccordian honda = new HondaAccordian(2018);
         assertEquals(0, honda.getMileage(), 0.1, "Default mileage should be zero.");
+        
         assertEquals(14.5, honda.getFuelCapacity(),  0.1, "Initial fuel capacity not correct.");
         assertEquals(honda.getFuelCapacity(), honda.getFuelLevel(), 0.1, "The car should begin full.");
         assertEquals(33.2, honda.getMPG(), 0.1, "Initial mpg not correct.");
