@@ -29,8 +29,8 @@ public class Sample_HondaAccordian_Tests {
             honda.drive(-1);
         }, "Driving mileage cannot be negative.");
 
-       assertTrue(honda.canDrive(30), "canDrive should be true");
-       honda.drive(30);
+        assertTrue(honda.canDrive(30), "canDrive should be true");
+        honda.drive(30);
         assertEquals(30, honda.getMileage(), .1, "Mileage should be 30 after first drive.");
 
         honda.drive(200);
