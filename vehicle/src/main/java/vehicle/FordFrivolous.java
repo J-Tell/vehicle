@@ -9,11 +9,15 @@ class FordFrivolous extends GasPoweredCar implements SelfDriving, Flying {
     /** Defaults mileage to 0. */
     public FordFrivolous() {
         super("Honda", "Accordian", 23.6, 20);
+        
     }
 
     /** @throws IllegalArgumentException if miles is negative.*/
     public boolean canFly(double miles) {
-        return false;
+        if(miles < 0)
+            throw new IllegalArgumentException("invalid argument");
+            
+        return true;
     }
 
     /** @throws IllegalArgumentException if miles is negative.
@@ -25,6 +29,6 @@ class FordFrivolous extends GasPoweredCar implements SelfDriving, Flying {
     }
     /** IllegalArgumentException if miles is negative. */
     public void driveAutonomously(double miles) {
-
+        
     }
 }

@@ -6,7 +6,7 @@ abstract class Car {
 
     private String make;
     private String model;
-    private double startingMileage;
+    protected double startingMileage;
 
     /** Creates a car with a starting mileage on the odometer.
 @throws IllegalArgumentException if startingMileage is negative*/
