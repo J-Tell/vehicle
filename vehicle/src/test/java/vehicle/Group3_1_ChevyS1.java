@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test;
 
 public class Group3_1_ChevyS1 {
     @Test
-    public void chevyConstructorTest1() {
+    public void chevyScenario1() {
         ChevroletBird bird = new ChevroletBird(0);
         double range = bird.getRemainingRange();
 
@@ -30,7 +30,7 @@ public class Group3_1_ChevyS1 {
         assertFalse(bird.canDrive(range + 1), "You should not be able to drive this amount");
         assertFalse(bird.canDrive(-1), "You should not be able to drive this amount");
         // toString
-        assertEquals("", bird.toString(), "this is the toString test");
+        assertEquals("Chevrolet Bird (0.0 mi)", bird.toString(), "this is the toString test");
         // getMileage
         assertEquals(0, bird.getMileage(), "Your mileage should be 0");
         // getMake
@@ -43,33 +43,5 @@ public class Group3_1_ChevyS1 {
         roadtrip.add(1.0);
 
         assertEquals(1, bird.roadTrip(roadtrip), "you drive full range 1st day, unable to drive second day");
-
-
-        // assertFalse(bird.canFly(30), "canFly should be false");
-        // assertThrows(IllegalArgumentException.class, () -> {
-        //     bird.canFly(-1);
-        // }, "Flying mileage cannot be negative.");
-
-        // bird.fly(230);
-        // assertEquals(250, bird.getMileage(), 0.1, "fly should be positive");
-        // assertThrows(IllegalArgumentException.class, () -> {
-        //     bird.fly(-1);
-        // }, "Flying mileage cannot be negative.");
-        // assertThrows(IllegalArgumentException.class, () -> {
-        //     bird.fly(251);
-        // }, "Flying mileage cannot be over the remaining range of the car.");
-        
-        // assertFalse(bird.canFly(-1), "Flying -1 should fail.");
-        // assertTrue(bird.canFly(1), "1 should succeed.");
-
-        // assertFalse(bird.canDrive(252), "Driving 252 should fail.");
-        // assertTrue(bird.canDrive(251), "Driving 251 should succeed.");
-
-        // bird.drive(251);
-        // assertEquals(481, bird.getMileage(), .1, "Mileage should be 481 after third drive.");
-
-        // assertThrows(IllegalArgumentException.class, () -> {
-        //     bird.drive(5);
-        // }, "Driving beyond empty should fail.");
     }
 }
