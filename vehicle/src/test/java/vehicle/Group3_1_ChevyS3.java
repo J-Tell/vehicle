@@ -36,6 +36,10 @@ public class Group3_1_ChevyS3 {
 
     @Test
     public void chevyDriveTest() {
+        ChevroletBird bird = new ChevroletBird(0);
+
+        assertFalse(bird.checkWingsExtended(), "checkWingsExtended should be false");
+
     }
 
 }
