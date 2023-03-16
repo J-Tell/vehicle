@@ -3,6 +3,8 @@ package vehicle;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.sql.Driver;
 import org.junit.jupiter.api.Test;
 
 
@@ -16,7 +18,7 @@ public class Group3_1_ChevyS4 {
 
     ChevroletBird bird = new ChevroletBird(0);
 
-    assertFalse(bird.canFly(30), "canFly should be false");
+    assertFalse(bird.canFly(bird.getMileage()), "canFly should be false");
     assertThrows(IllegalArgumentException.class, () -> {
         bird.canFly(-1);
     }, "Flying mileage cannot be negative.");
