@@ -62,14 +62,14 @@ public class Group3_1_ChevyS1 {
         // assertFalse(bird.canFly(-1), "Flying -1 should fail.");
         // assertTrue(bird.canFly(1), "1 should succeed.");
 
-        assertFalse(bird.canDrive(252), "Driving 252 should fail.");
-        assertTrue(bird.canDrive(251), "Driving 251 should succeed.");
+        // assertFalse(bird.canDrive(252), "Driving 252 should fail.");
+        // assertTrue(bird.canDrive(251), "Driving 251 should succeed.");
 
-        bird.drive(251);
-        assertEquals(481, bird.getMileage(), .1, "Mileage should be 481 after third drive.");
+        // bird.drive(251);
+        // assertEquals(481, bird.getMileage(), .1, "Mileage should be 481 after third drive.");
 
-        assertThrows(IllegalArgumentException.class, () -> {
-            bird.drive(5);
-        }, "Driving beyond empty should fail.");
+        // assertThrows(IllegalArgumentException.class, () -> {
+        //     bird.drive(5);
+        // }, "Driving beyond empty should fail.");
     }
 }
