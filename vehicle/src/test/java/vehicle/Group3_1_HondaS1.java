@@ -68,12 +68,5 @@ public class Group3_1_HondaS1 {
             honda.drive(5);
         }, "Driving beyond empty should fail.");
     }
-    public void chevyWingsTest() {
-    }
-    public void chevyDriveTest() {
-    }
-    public void chevyCanFlyTest() {
-    }
-    public void chevyFlyingTest() {
-    }
+
 }
