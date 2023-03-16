@@ -4,13 +4,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.sql.Driver;
-
 import javax.sound.midi.MidiFileFormat;
 
+/*
+ * Need to test Car methods:
+ * canDrive
+ * getMileage
+ * getMake
+ * getModel
+ * roadTrip
+ */
+
 import org.junit.jupiter.api.Test;
-public class Group3_1_HondaAccordian {
+public class Group3_1_HondaS1 {
     @Test
     public void hondaConstructorTest1() {
         HondaAccordian honda = new HondaAccordian(2018);
@@ -68,12 +75,5 @@ public class Group3_1_HondaAccordian {
             honda.drive(5);
         }, "Driving beyond empty should fail.");
     }
-    public void chevyWingsTest() {
-    }
-    public void chevyDriveTest() {
-    }
-    public void chevyCanFlyTest() {
-    }
-    public void chevyFlyingTest() {
-    }
+
 }

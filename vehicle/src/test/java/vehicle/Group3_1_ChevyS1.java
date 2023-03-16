@@ -4,11 +4,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.sql.Driver;
-
 import org.junit.jupiter.api.Test;
-public class Group3_1_ChevyBird {
+
+/*
+ * Need to test Car methods:
+ * canDrive
+ * toString
+ * getMileage
+ * getMake
+ * getModel
+ * roadTrip
+ */
+
+public class Group3_1_ChevyS1 {
     @Test
     public void chevyConstructorTest1() {
         ChevroletBird bird = new ChevroletBird(0);
