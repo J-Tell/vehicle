@@ -61,12 +61,5 @@ public class Group3_1_HondaAccordian {
             honda.drive(5);
         }, "Driving beyond empty should fail.");
     }
-    public void chevyWingsTest() {
-    }
-    public void chevyDriveTest() {
-    }
-    public void chevyCanFlyTest() {
-    }
-    public void chevyFlyingTest() {
-    }
+
 }
