@@ -10,7 +10,6 @@ import javax.sound.midi.MidiFileFormat;
 /*
  * Need to test Car methods:
  * canDrive
- * toString
  * getMileage
  * getMake
  * getModel
