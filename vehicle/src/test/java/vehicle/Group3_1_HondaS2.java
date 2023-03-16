@@ -2,7 +2,6 @@ package vehicle;
 
 /*
  * Need to test methods:
- * drive
  * getMPG
  * getFuelCapacity
  * getFuelLevel
