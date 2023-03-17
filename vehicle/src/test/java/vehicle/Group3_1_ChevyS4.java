@@ -26,7 +26,7 @@ public class Group3_1_ChevyS4 {
     @Test
     public void chevyFlyTest() {
     
-        ChevroletBird bird = new ChevroletBird(0);
+    ChevroletBird bird = new ChevroletBird(0);
 
     bird.fly(bird.getMileage());
     assertThrows(IllegalArgumentException.class, () -> {
