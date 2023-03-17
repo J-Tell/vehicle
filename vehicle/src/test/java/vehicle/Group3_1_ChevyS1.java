@@ -42,7 +42,6 @@ public class Group3_1_ChevyS1 {
         ChevroletBird bird = new ChevroletBird(0);
 
         assertEquals(0, bird.getMileage(), "Your mileage should be 0");
-
     }
 
     @Test
