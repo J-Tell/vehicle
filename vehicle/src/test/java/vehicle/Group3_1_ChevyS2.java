@@ -35,6 +35,7 @@ public class Group3_1_ChevyS2 {
         
         // recharge
         bird.recharge();
+        assertEquals(250, bird.getMaxRange(), "Should be 250 miles");
     }
     
 }

@@ -28,7 +28,7 @@ public class Group3_1_ChevyS1 {
 
         assertTrue(bird.canDrive(range), "You should be able to drive this amount");
         assertFalse(bird.canDrive(range + 1), "You should not be able to drive this amount");
-        assertThrows(IllegalArgumentException.class, () -> {bird.canDrive(-1);}, "You should not be able to drive this amount");
+        assertThrows(IllegalArgumentException.class, () -> {bird.canDrive(-1);}, "Should have exception here");
     }
 
     @Test
@@ -69,5 +69,12 @@ public class Group3_1_ChevyS1 {
         roadtrip.add(1.0);
 
         assertEquals(1, bird.roadTrip(roadtrip), "you drive full range 1st day, unable to drive second day");
+
+        bird.recharge();
+        List<Double> roadtrip2 = new ArrayList<Double>();
+        roadtrip.add(range);
+        roadtrip.add(-1.0);
+
+        assertThrows(IllegalArgumentException.class, () -> {bird.roadTrip(roadtrip2);}, "Should have exception here");
     }
 }
