@@ -6,6 +6,7 @@ package vehicle;
  * getFuelCapacity
  * getFuelLevel
  * refillTank (both no param and when passed double)
+ * drive
  * getRemainingRange
  */
 
