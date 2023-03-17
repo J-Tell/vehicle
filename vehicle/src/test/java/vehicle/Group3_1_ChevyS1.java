@@ -2,6 +2,7 @@ package vehicle;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
@@ -27,13 +28,12 @@ public class Group3_1_ChevyS1 {
 
         assertTrue(bird.canDrive(range), "You should be able to drive this amount");
         assertFalse(bird.canDrive(range + 1), "You should not be able to drive this amount");
-        assertFalse(bird.canDrive(-1), "You should not be able to drive this amount");
+        assertThrows(IllegalArgumentException.class, () -> {bird.canDrive(-1);}, "You should not be able to drive this amount");
     }
 
     @Test
     public void toStringTest() {
         ChevroletBird bird = new ChevroletBird(0);
-
         assertEquals("Chevrolet Bird (0.0 mi)", bird.toString(), "this is the toString test");
     }
 

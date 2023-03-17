@@ -29,6 +29,9 @@ superclass drive. Don’t copy-and-paste the same code here.*/
 
     /** @throws IllegalArgumentException if miles is negative.*/
     public boolean canFly(double miles) {
+        if (miles < 0) {
+            throw new IllegalArgumentException();
+        }
         return this.openWings;
     }
 
