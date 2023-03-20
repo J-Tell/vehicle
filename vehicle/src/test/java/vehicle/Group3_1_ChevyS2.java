@@ -16,6 +16,7 @@ public class Group3_1_ChevyS2 {
         ChevroletBird bird = new ChevroletBird(0);
         bird.drive(bird.getRemainingRange());
         // getRemainingRange
+        //should this be 250 or 0?
         assertEquals(250, bird.getRemainingRange(), "Should have 250 miles of range");
         //
     }
