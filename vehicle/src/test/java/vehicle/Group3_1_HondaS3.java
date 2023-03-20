@@ -18,13 +18,13 @@ public class Group3_1_HondaS3 {
     @Test
     public void testConstructor1() {
         HondaAccordian honda = new HondaAccordian(34, 2018);
-        assertEquals(34, honda.startingMileage, "Bad constructor");
+        assertEquals(34, honda.getMileage(), "Bad constructor");
     }
 
     @Test
     public void testConstructor2() {
         HondaAccordian honda = new HondaAccordian(2018);
-        assertEquals(2018, honda.modelYear, "Bad constructor");
+        assertEquals(2018, honda.getModel(), "Bad constructor");
     }
 
     @Test
