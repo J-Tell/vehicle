@@ -72,8 +72,8 @@ public class Group3_1_ChevyS1 {
 
         bird.recharge();
         List<Double> roadtrip2 = new ArrayList<Double>();
-        roadtrip.add(range);
-        roadtrip.add(-1.0);
+        roadtrip2.add(range);
+        roadtrip2.add(-1.0);
 
         assertThrows(IllegalArgumentException.class, () -> {bird.roadTrip(roadtrip2);}, "Should have exception here");
     }

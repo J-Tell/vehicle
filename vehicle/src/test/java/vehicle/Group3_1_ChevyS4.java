@@ -31,7 +31,7 @@ public class Group3_1_ChevyS4 {
         bird.fly(-1);
     }, "Flying mileage cannot be negative.");
     assertThrows(IllegalArgumentException.class, () -> {
-        bird.fly(bird.getMileage() + 1);
+        bird.fly(bird.getRemainingRange() + 1);
     }, "Flying mileage cannot be over the remaining range of the car.");
 }
 }

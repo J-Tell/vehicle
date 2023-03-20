@@ -94,7 +94,8 @@ is attempted. */
                 throw new IllegalArgumentException("Miles is negative");
             }
             if (canDrive(day)) {
-                addMileage(days);
+                addMileage(day);
+                drive(day);
                 days++;
             } else {
                 break;

@@ -11,6 +11,7 @@ abstract class ElectricCar extends Car {
             throw new IllegalArgumentException("Max Charge mileage is nonpositive");
         }
         milesOnMaxCharge = onMaxCharge;
+        milesLeft = onMaxCharge;
     }
 
     /** Defaults mileage to 0.
@@ -21,6 +22,7 @@ abstract class ElectricCar extends Car {
             throw new IllegalArgumentException("Max Charge mileage is nonpositive");
         }
         milesOnMaxCharge = onMaxCharge;
+        milesLeft = onMaxCharge;
     }
 
     /** Drives the full given number of miles.
