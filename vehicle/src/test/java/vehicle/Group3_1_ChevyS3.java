@@ -11,17 +11,13 @@ import org.junit.jupiter.api.Test;
  */
 public class Group3_1_ChevyS3 {
     @Test
-    public void chevyConstructorTest3() {
+    public void chevyConstructorTest() {
+        ChevroletBird chevy = new ChevroletBird(34);
+        assertEquals(34, chevy.getMileage(), "Bad constructor");
 
-        ChevroletBird bird = new ChevroletBird(0);
-
-        // assertThrows(IllegalArgumentException.class, () -> {
-        // bird.fly(-1);
-        // }, "Flying mileage cannot be negative.");
-    }
-
-    @Test
-    public void chevyConstructorTest4() {
+        assertThrows(IllegalArgumentException.class, () -> {
+        ChevroletBird(-1);
+        }, "Starting Mileage cannot be negative.");
     }
 
     @Test
