@@ -16,7 +16,7 @@ public class Group3_1_ChevyS3 {
         ChevroletBird bird = new ChevroletBird(0);
 
         // assertThrows(IllegalArgumentException.class, () -> {
-        //     bird.fly(-1);
+        // bird.fly(-1);
         // }, "Flying mileage cannot be negative.");
     }
 
@@ -26,9 +26,9 @@ public class Group3_1_ChevyS3 {
 
     @Test
     public void chevyCheckWingExtendedTest() {
-    ChevroletBird bird = new ChevroletBird(0);
+        ChevroletBird bird = new ChevroletBird(0);
 
-    assertFalse(bird.checkWingsExtended(), "checkWingsExtended should be false");
+        assertFalse(bird.checkWingsExtended(), "checkWingsExtended should be false");
     }
 
     @Test
@@ -36,7 +36,7 @@ public class Group3_1_ChevyS3 {
         ChevroletBird bird = new ChevroletBird(0);
 
         assertFalse(bird.checkWingsExtended(), "checkWingsExtended should be false");
-        //copy and paste honda accordian drive method
+        // copy and paste honda accordian drive method
 
     }
 

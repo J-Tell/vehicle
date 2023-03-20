@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 public class Group3_1_HondaS3 {
 
     @Test
-    public void testConstructor1() {
+    public void testConstructor() {
         HondaAccordian honda = new HondaAccordian(34, 2018);
         assertEquals(34, honda.getMileage(), "Bad constructor");
     }
