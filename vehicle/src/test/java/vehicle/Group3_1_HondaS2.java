@@ -1,5 +1,7 @@
 package vehicle;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 
 /*
@@ -22,12 +24,16 @@ public class Group3_1_HondaS2 {
 
     @Test
     public void getMPGTest() {
+        HondaAccordian honda = new HondaAccordian(70, 2018);
 
+        assertEquals(33.2, honda.getMPG(), "Should be 33.2 MPG.");
     }
 
     @Test
     public void getFuelLevelTest() {
+        HondaAccordian honda = new HondaAccordian(2018);
 
+        assertEquals(33.2, honda.getFuelCapacity(), "Should be 33.2 MPG.");
     }
 
     @Test

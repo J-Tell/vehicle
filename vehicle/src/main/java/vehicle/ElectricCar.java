@@ -1,5 +1,4 @@
 package vehicle;
-
 abstract class ElectricCar extends Car {
     private double milesOnMaxCharge;
     private double milesLeft;
