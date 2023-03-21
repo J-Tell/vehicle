@@ -1,6 +1,7 @@
 package vehicle;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -18,8 +19,13 @@ public class Group3_1_HondaS2 {
     @Test
     public void driveTest() {
         HondaAccordian honda = new HondaAccordian(70, 2018);
-        //assertEquals(0, honda.getMileage(), 0.1, "Default mileage should be zero.");
-        double mile = honda.getMileage();
+        double range = honda.getRemainingRange();
+        honda.drive(range);
+        assertEquals(range + 70, honda.getMileage(),  "Mileage should be a full drive after first drive.");
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            honda.drive(5);
+        }, "Driving beyond empty should fail.");
     }
 
     @Test
@@ -33,16 +39,25 @@ public class Group3_1_HondaS2 {
     public void getFuelLevelTest() {
         HondaAccordian honda = new HondaAccordian(2018);
 
-        assertEquals(33.2, honda.getFuelCapacity(), "Should be 33.2 MPG.");
+        assertEquals(14.5, honda.getFuelLevel(), "Should be 14.5 Gallons.");
+        honda.drive(honda.getRemainingRange());
+
+        assertEquals(0, honda.getFuelLevel(), "Should be 0 Gallons.");
     }
 
     @Test
     public void refillTankTest() {
+        HondaAccordian honda = new HondaAccordian(2018);
+        honda.drive(honda.getRemainingRange());
 
+        assertEquals(14.5, honda.getFuelCapacity(), "Should be 14.5 Gallons");
     }
 
     @Test
     public void getRemainingRangeTest() {
+        HondaAccordian honda = new HondaAccordian(2018);
+        honda.drive(honda.getRemainingRange());
 
+        assertEquals(0, honda.getRemainingRange(), "Should be 0 miles of range left.");
     }
 }

@@ -15,13 +15,8 @@ public class Group3_1_ChevyS3 {
 
         ChevroletBird bird = new ChevroletBird(0);
 
-        // assertThrows(IllegalArgumentException.class, () -> {
-        //     bird.fly(-1);
-        // }, "Flying mileage cannot be negative.");
-    }
-
-    @Test
-    public void chevyConstructorTest4() {
+        HondaAccordian bird = new HondaAccordian(34, 2018);
+        assertEquals(34, bird.getMileage(), "Bad constructor");
     }
 
     @Test
@@ -38,10 +33,6 @@ public class Group3_1_ChevyS3 {
         assertFalse(bird.checkWingsExtended(), "checkWingsExtended should be false");
         //copy and paste honda accordian drive method
 
-    }
-
-    public void chevyRoadTripTest() {
-        //
     }
 
 }
