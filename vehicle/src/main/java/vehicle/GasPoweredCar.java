@@ -1,5 +1,4 @@
 package vehicle;
-
 public abstract class GasPoweredCar extends Car {
 
     private double fuelCapacityGallons;
@@ -11,6 +10,9 @@ public abstract class GasPoweredCar extends Car {
      */
     public GasPoweredCar(String model, String make, double startingMileage, double mpg, double fuel) {
         super(model, make, startingMileage);
+        if (mpg < 0 || fuel < 0) {
+            throw new IllegalArgumentException("Negative Params");
+        }
         this.fuelCapacityGallons = fuel;
         this.fuelLeft = fuel;
         this.mpg = mpg;
@@ -22,6 +24,9 @@ public abstract class GasPoweredCar extends Car {
      */
     public GasPoweredCar(String model, String make, double mpg, double fuel) {
         super(model, make);
+        if (mpg < 0 || fuel < 0) {
+            throw new IllegalArgumentException("Negative Params");
+        }
         this.fuelCapacityGallons = fuel;
         this.fuelLeft = fuel;
         this.mpg = mpg;
@@ -47,7 +52,7 @@ public abstract class GasPoweredCar extends Car {
 
     /** Returns how many gallons of fuel are currently in the car. */
     public double getFuelLevel() {
-        return fuelCapacityGallons;
+        return this.fuelLeft;
     }
 
     /** Returns how many gallons of fuel the car can hold at max. */
