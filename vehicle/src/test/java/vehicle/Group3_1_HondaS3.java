@@ -19,7 +19,7 @@ public class Group3_1_HondaS3 {
         assertEquals(34, honda.getMileage(), "Bad constructor");
 
         assertThrows(IllegalArgumentException.class, () -> {
-        HondaAccordian(-1);
+        new HondaAccordian(-1);
         }, "Starting Mileage cannot be negative.");
     }
 

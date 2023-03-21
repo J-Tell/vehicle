@@ -18,7 +18,7 @@ public class Group3_1_ChevyS3 {
         assertEquals(34, chevy.getMileage(), "Bad constructor");
 
         assertThrows(IllegalArgumentException.class, () -> {
-        ChevroletBird(-1);
+        new ChevroletBird(-1);
         }, "Starting Mileage cannot be negative.");
     }
 
