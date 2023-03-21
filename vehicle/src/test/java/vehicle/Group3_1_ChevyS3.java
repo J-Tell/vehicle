@@ -36,8 +36,4 @@ public class Group3_1_ChevyS3 {
 
     }
 
-    public void chevyRoadTripTest() {
-        //
-    }
-
 }
