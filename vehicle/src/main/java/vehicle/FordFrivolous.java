@@ -2,12 +2,12 @@ package vehicle;
 class FordFrivolous extends GasPoweredCar implements SelfDriving, Flying {
     /** FordFrivolous has a gas tank of 20 gallons and an MPG of 23.6. */
     public FordFrivolous(double startingMileage) {
-        super("Honda", "Accordian", startingMileage, 23.6, 20);
+        super("Ford", "Frivolous", startingMileage, 23.6, 20);
     }
 
     /** Defaults mileage to 0. */
     public FordFrivolous() {
-        super("Honda", "Accordian", 23.6, 20);
+        super("Ford", "Frivolous", 23.6, 20);
         
     }
 
@@ -15,7 +15,9 @@ class FordFrivolous extends GasPoweredCar implements SelfDriving, Flying {
     public boolean canFly(double miles) {
         if(miles < 0)
             throw new IllegalArgumentException("invalid argument");
-            
+        if (getRemainingRange() / 3 < miles) {
+            return false;
+        }
         return true;
     }
 
@@ -32,8 +34,7 @@ class FordFrivolous extends GasPoweredCar implements SelfDriving, Flying {
         if (miles > useableRange) {
             throw new IllegalArgumentException("Not Sufficient Fuel");
         }
-        drive(miles);
-        decreaseFuelLevel(2 * (miles / getMPG()));
+        decreaseFuelLevel(3 * (miles / getMPG()));
     }
     /** IllegalArgumentException if miles is negative. */
     public void driveAutonomously(double miles) {
@@ -44,6 +45,7 @@ class FordFrivolous extends GasPoweredCar implements SelfDriving, Flying {
         double useableRange = useableFuel * getMPG();
         if (useableRange < miles) {
             drive(useableRange);
+            decreaseFuelLevel(getFuelLevel());
         } else {
             drive(miles);
             decreaseFuelLevel(miles / getMPG());

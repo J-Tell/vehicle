@@ -42,7 +42,7 @@ public class TeslaModelZ extends ElectricCar implements SelfDriving {
      * implement Car.toString()
      */
     public String toString() {
-        return getMake() + " " + getModel() + " " + getMileage();
+        return getMake() + " " + getModel() + " (" + getMileage() + " mi)";
     }
     /** IllegalArgumentException if miles is negative. */
     public void driveAutonomously(double miles) {

@@ -11,7 +11,7 @@ abstract class Car {
     /** Creates a car with a starting mileage on the odometer.
 @throws IllegalArgumentException if startingMileage is negative*/
     public Car(String make, String model, double sm) {
-        if (startingMileage < 0) {
+        if (sm < 0) {
             throw new IllegalArgumentException("Starting Mileage is negative.");
         }
         this.make = make;
@@ -94,7 +94,7 @@ is attempted. */
                 throw new IllegalArgumentException("Miles is negative");
             }
             if (canDrive(day)) {
-                addMileage(day);
+                // addMileage(day);
                 drive(day);
                 days++;
             } else {

@@ -30,8 +30,10 @@ superclass drive. Don’t copy-and-paste the same code here.*/
     public boolean canFly(double miles) {
         if (miles < 0) {
             throw new IllegalArgumentException();
+        } else if (miles > getRemainingRange()) {
+            return false;
         }
-        return this.openWings;
+        return true;
     }
 
     /** @throws IllegalArgumentException if miles is negative.
@@ -43,6 +45,6 @@ superclass drive. Don’t copy-and-paste the same code here.*/
             throw new IllegalArgumentException("Bad miles");
         }
         this.openWings = true;
-        super.drive(miles);
+        decreaseCharge(miles);
     }
 }
